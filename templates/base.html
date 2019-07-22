@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} ng-app="home" {% endblock %}
+{% block styles %}
+{{super()}}
+    {% assets filters="cssmin", output="gen/packed.css", "css/site.css" %}
+          <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+    {% endassets %}
+{% endblock %}
+
+{% block cssfiles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+    {{ content }}
+    </div>
+{% endblock %}
